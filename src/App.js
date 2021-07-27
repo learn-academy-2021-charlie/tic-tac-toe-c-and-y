@@ -27,29 +27,45 @@ class App extends Component{
 }
   }
   // find diff way to fire this.winGame
-componentDidUpdate(){
-  this.winGame()
-}
+// componentDidUpdate(){
+//   this.winGame()
+// }
   winGame = () => {
-    const {board, handleGamePlay} = this.state
-    
-  
-    // if(board[0] === "❌" && board[1] === "❌" && board[2] === "❌")
-    // console.log("win")
-    const rows = [
-      [0, 1, 2],
-      [3, 4, 5],
-      [6, 7, 8],
-      [0, 3, 6],
-      [1, 4, 7],
-      [2, 5, 8],
-      [0, 4, 8],
-      [2, 4, 6]
-  ]
+    const {board} = this.state
        if(board[0] === "❌" && board[1] === "❌" && board[2] === "❌"){
       console.log("win")
-       }
+       } else if(board[3] === "❌" && board[4] === "❌" && board[5] === "❌"){
+        
+       } else if(board[6] === "❌" && board[7] === "❌" && board[8] === "❌"){
+
+       } else if(board[0] === "❌" && board[3] === "❌" && board[6] === "❌"){
+
+       } else if(board[1] === "❌" && board[4] === "❌" && board[7] === "❌"){
+
+       } else if(board[2] === "❌" && board[5] === "❌" && board[8] === "❌"){
+
+       } else if(board[0] === "❌" && board[4] === "❌" && board[8] === "❌"){
+
+       } else if(board[2] === "❌" && board[4] === "❌" && board[6] === "❌"){
+
+       } else if(board[3] === "🔵" && board[4] === "🔵" && board[5] === "🔵"){
+        
+      } else if(board[6] === "🔵" && board[7] === "🔵" && board[8] === "🔵"){
+
+      } else if(board[0] === "🔵" && board[3] === "🔵" && board[6] === "🔵"){
+
+      } else if(board[1] === "🔵" && board[4] === "🔵" && board[7] === "🔵"){
+
+      } else if(board[2] === "🔵" && board[5] === "🔵" && board[8] === "🔵"){
+
+      } else if(board[0] === "🔵" && board[4] === "🔵" && board[8] === "🔵"){
+
+      } else if(board[2] === "🔵" && board[4] === "🔵" && board[6] === "🔵"){
+        
       }
+      
+      } 
+
   
 
   
