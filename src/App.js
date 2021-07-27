@@ -9,7 +9,8 @@ class App extends Component{
     this.state = {
       board: [" ", " ", " ", " ",""," ", " ", " ", " "],
       player1: true,
-      player2: false
+      player2: false,
+      play: true
     }
   }
 
@@ -17,13 +18,14 @@ class App extends Component{
     const {board} = this.state
     const {player1} = this.state
     const {player2} = this.state
-    if(player1===true){
+    const {play} = this.state
+    if(player1===true && board[index] !== "🔵"){
     board[index] = "❌" 
     this.setState({board: board, player1: false, player2:true})
-  } else if(player2===true) {
+  } else if(player2===true && board[index] !== "❌") {
       board[index] = "🔵"
         this.setState({board: board, player1: true, player2:false})
-}
+}  
   }
 
 
