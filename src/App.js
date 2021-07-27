@@ -6,8 +6,23 @@ class App extends Component{
   constructor(props){
     super(props)
     this.state = {
-      squares: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+      board: [" ", " ", " ", " ",""," ", " ", " ", " "],
+      player1: null,
+      player2: null
     }
+  }
+
+  handleGamePlay = (index) => {
+    console.log(index)
+    const {board} = this.state
+    
+      board[index] = "❌"
+      this.setState({board: board})
+    
+    //   else if(index === this.state.player2){
+    //   board[index] = "🔵"
+    //   this.setState({board: board})
+    // }
   }
 
   render(){
@@ -15,7 +30,7 @@ class App extends Component{
       <>
         <h1>Tic Tac Toe</h1>
         <div id="gameboard">
-        {this.state.squares.map((value, index) => {
+        {this.state.board.map((value, index) => {
           return (
             <Square 
             value={value} 
